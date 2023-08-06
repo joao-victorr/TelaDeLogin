@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <main>
+        <form action="login" method="post">
+            <fieldset>
+                <legend>Login</legend>
+
+                <label for="">Email: </label> <br/>
+                <input type="email" name="email"> <br/><br/>
+
+                <label for="">Password: </label> <br/>
+                <input type="password" name="password">
+                
+                <button type="submit">Logar</button>
+
+                {{#campoVazio}}
+                    <span> A campos obrigatorios vazio</span>
+                {{/campoVazio}}
+
+                {{#incorrect}}
+                    <span>Email ou senha incorreto</span>
+                {{/incorrect}}
+
+            </fieldset>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

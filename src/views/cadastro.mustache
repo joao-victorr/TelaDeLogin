@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <main>
+        <form action="cadastro" method="post">
+            <fieldset>
+                <legend>Cadastro</legend>
+
+                <label for="">Name: </label> <br/>
+                <input type="text" name="name" placeholder="Digite seu nome"><br/><br/>
+
+                <label for="">Email: </label> <br/>
+                <input type="email" name="email" placeholder="Digite seu email"> <br/><br/>
+
+                <label for="">Password: </label> <br/>
+                <input type="password" name="password" placeholder="Digite seu senha">
+                
+                <button type="submit">Cadastrar</button>
+
+                {{#error}}
+                    <span> Email existente</span>
+                {{/error}}
+
+                {{#campoVazio}}
+                    <span> A algum campo vazio </span>
+                {{/campoVazio}}
+
+            </fieldset>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
